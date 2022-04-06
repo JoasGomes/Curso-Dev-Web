@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //funções anônimas
+
+        /*
+        funções anônimas para serem chamadas precisam ser atribuídas 
+        a uma variável.
+        */
+        var exibirSaudacao = function(nome){
+            document.write('olá '+ nome+',tudo bem ?')
+        }
+        exibirSaudacao('jorge')
+
+        //funções de callback
+        function exibirArtigo(id,callbackSucesso,callbackErro){
+            if (true){
+                callbackSucesso('funções de callback em js','funções de callback são muito usadas')
+            }else{
+                callbackErro('erro ao recuperar os dados')
+            }
+        }
+
+        var callbackSucesso = function(titulo,descricao){
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr/>')
+            document.write('<p>' + descricao + '<p>')
+        }
+        var callbackErro = function(erro){
+            document.write('<p><b>Erro:</b>' + erro + '<p>')
+        }
+
+        exibirArtigo(1,callbackSucesso,callbackErro)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
