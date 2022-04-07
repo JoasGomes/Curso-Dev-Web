@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //eventos
+        /*
+        ->> mouse
+        
+        - onclick = quando o elemento é clicado
+        - ondblclick = quando o elemento é clicado 2 vezes
+        - onmouseup = quando o click foi liberado(deixar de manter pressionado)
+        - onmouseover = quando o cursor sobrepor a região
+        - onmouseout = quando o cursor sair do elemento
+
+        ->> teclado
+        
+        - onkeydown = quando a teclado é pressionada
+        - onkeypress = quando a tecla pressionada for um caractere
+        - onkeyup = quando a teclado for solta
+
+        ->> janela
+        
+        - onresize = quando a página ou frame é redimensionado
+        - onscroll = quando o scroll é ultilizado
+
+        ->> formulário
+        
+        - onfocus = quando o cursor da o foco nele(click)
+        - onblur = perder o foco clicar em outro lugar
+        - onchange = sempre quando o estado(elemento clicado) for modificado
+        */
+       function acao(){
+           alert('evento disparado')
+       }
+
+       function acao1(){
+           alert('evento acao1')
+       }
+
+
+
+    </script>
+</head>
+<body>
+    <div onclick="acao()" style="background: #ccc; height: 150px; width: 150px;">
+    </div>
+    <br><hr>
+
+    <input onkeydown="acao1()" type="text">
+</body>
+</html>
