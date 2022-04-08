@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .estilo1{
+            background: #FF0000;
+            color: #FFF;
+        }
+
+        .estilo2{
+            width: 400px;
+            height: 50px;
+            background-color: #FF0000;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 25px;
+        }
+
+
+    </style>
+
+
+    <script>
+
+        //->> manipulando estilos de elementos com ID
+
+        /* 
+        function modificaEstilo(corDeFundo){
+            
+            document.getElementById('quadrado').style.background = corDeFundo
+        }
+        */
+
+        //->> manipulando estilos de elemntos com classe
+
+        function modificaClasse(){
+            document.getElementById('mensagem').className = 'estilo2'
+
+
+        }
+    </script>
+</head>
+<body>
+    
+
+    <!-- 
+    <h3>Manipulando estilos</h3>
+
+    <button type="button" onclick="modificaEstilo('#FF0000')">Vermelho</button>
+    <button type="button" onclick="modificaEstilo('#00FF00')">Verde</button>
+    <button type="button" onclick="modificaEstilo('#0000FF')">Azul</button>
+
+    <hr>
+
+    <div style="border:solid 1px #000; width:100px; height: 100px;" id="quadrado"></div>
+ -->
+
+
+    <div id="mensagem" class="estilo1">Modificando a classe do elemento</div>
+    <hr>
+    <button type="button" onclick="modificaClasse()">Aplicar classe</button>
+</body>
+</html>
