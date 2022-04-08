@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    <input type="text"
+    placeholder="digite seu nome"
+    id="nome_usuario"
+    class="campo_texto"
+    name="nome"> 
+    -->
+
+    <input type="text"
+    placeholder="digite um caracter aqui"
+    onkeyup="distribuiCaracter()"
+    id="entrada">
+
+    <hr>
+    <span>Letras:</span>
+    <input type="text"
+     disabled="disabled"
+     id="apenas_letras">
+
+    <span>Números:</span>
+    <input type="text"
+     disabled="disabled"
+     id="apenas_numeros">
+
+
+
+    <script>
+
+        //->> DOM = documnet obeject model
+        //API que permite o acesso via javascript aos elementos da página
+
+        /*
+        ->> selecionando elementos na página
+
+        - getElementById = seleciona por indentificador
+        - getElementsByTagName = seleciona pelo tipo de tag html
+        - getElementsByClassName = seleciona pelo nome da classe
+        - getElementsByName = 
+        
+        */
+
+        //exemplos:
+       /*  console.log(document.getElementById('nome_usuario'))
+        console.log(document.getElementsByTagName('input'))
+        console.log(document.getElementsByClassName('campo_texto'))
+        console.log(document.getElementsByName('nome')) */
+
+
+
+        /*
+        ->> modificando os valores do inputs (text)
+        */
+       
+        function distribuiCaracter(){
+
+
+            //selecionar o valor digitado
+            var caracter = document.getElementById('entrada').value
+
+            //posso limpar o campo de digitação
+            document.getElementById('entrada').value = ''
+
+            //limpar espaços em branco nas extremidades da string
+            caracter.trim()
+
+            switch(caracter){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    //adicionar o caracter no campo referente a números
+                    document.getElementById('apenas_numeros').value += caracter
+                    break;
+                default:
+                    //adicionar o caracter no campo referente a letras
+                    document.getElementById('apenas_letras').value += caracter
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
