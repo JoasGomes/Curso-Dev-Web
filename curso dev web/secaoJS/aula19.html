@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //->> BOM = browser object model
+        //- API que permite o acesso via javascript a recursos do browser
+        // DOM tem haver com os recursos HTML enquanto o BOM com recurso do browser
+
+        //->> window = engloba o document(DOM). está um nível acima
+
+        var janela
+
+        function abrirPopUp(){
+            janela = window.open('http://www.google.com','nova_janela','width=200,height=100')
+        }
+        function fecharPopUp(){
+            janela.close()
+        }
+
+        //->> window.screen
+
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        document.write('altura do navegador é: ' + altura + '<br/>')
+        document.write('largura do navegador é: ' + largura + '<br/>')
+
+        //->> timing
+
+        //- setTimeout(<ação>,<tempo em milissegundos) === sempre executa uma vez após o período
+        //  clearTimeout()
+
+        //- setInterval(<ação>,<tempo em milissegundos) === sempre executa após o período
+        //  clearInterval()
+
+        /* setTimeout(function(){
+            document.write('teste')
+        },2000) */
+
+        var i = 5
+
+        setInterval(function(){
+            //um cronômetro e decresce a cada 2 seg
+            document.write(i)
+            i--
+
+            //quando o cronômetro chegar a 0 a pág recarrega
+            if(i===0){
+                window.location.reload()
+            }
+        },2000)
+
+
+
+    </script>
+</head>
+<body>
+    <button onclick="abrirPopUp()">abrir janela</button>
+    <button onclick="fecharPopUp()">fechar janela</button>
+
+    <!-- ->> window.location -->
+    <button onclick=" window.location.href='http://www.google.com' ">acessar google</button>
+</body>
+</html>
