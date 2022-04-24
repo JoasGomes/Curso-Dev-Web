@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <script>
 
         //3 escopos(abrir e fechar de chaves): global, função e bloco
         
@@ -67,10 +58,3 @@
         //acontece um erro, não se pode mudar valor de uma constante
         marca = 'nike'
         console.log(marca)
-
-    </script>
-</head>
-<body>
-    
-</body>
-</html>

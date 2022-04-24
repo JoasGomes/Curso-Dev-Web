@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
+
         //concatenação
         var nome = prompt('digite seu nome:')
         var idade = prompt('digite sua idade:')
@@ -20,9 +13,3 @@
         //undefined
         var teste2 = undefined //undefinido ou vazio 
 
-    </script>
-</head>
-<body>
-    
-</body>
-</html>
